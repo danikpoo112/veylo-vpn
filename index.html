@@ -1,223 +1,109 @@
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#090b12">
-<title>VEYLO VPN — Твой интернет. Твои правила.</title>
-<meta name="description" content="VEYLO VPN — новый взгляд на приватность и контроль над подключением.">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#08090d">
+<title>VEYLO — Your space. Your rules.</title>
 <style>
-:root {
-  --bg: #090b12;
-  --panel: #121522;
-  --text: #f7f7fc;
-  --muted: #a6adc0;
-  --purple: #a394ff;
-  --mint: #8cf0d0;
-}
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body {
-  margin: 0;
-  background: radial-gradient(ellipse at 80% 10%, #5140a833, transparent 38%), var(--bg);
-  color: var(--text);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  line-height: 1.6;
-}
-a { color: inherit; text-decoration: none; }
-.wrap { width: min(1100px, 90%); margin: auto; }
-nav {
-  height: 78px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid #ffffff18;
-}
-.logo { font-size: 19px; font-weight: 800; letter-spacing: 4px; }
-.logo span { color: var(--purple); }
-nav a:last-child { color: var(--muted); font-size: 14px; }
-.hero {
-  min-height: 610px;
-  display: grid;
-  grid-template-columns: 1.2fr .8fr;
-  align-items: center;
-  gap: 35px;
-  padding: 70px 0;
-}
-.label {
-  display: inline-block;
-  border: 1px solid #a394ff55;
-  border-radius: 50px;
-  padding: 7px 13px;
-  color: #d2cbff;
-  font-size: 12px;
-  letter-spacing: 1px;
-}
-h1 {
-  font-size: clamp(44px, 7vw, 78px);
-  line-height: 1.02;
-  letter-spacing: -4px;
-  margin: 24px 0;
-}
-h1 span { color: var(--purple); }
-.lead { color: var(--muted); font-size: 18px; max-width: 540px; }
-.buttons { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 28px; }
-.btn {
-  display: inline-block;
-  padding: 13px 19px;
-  border-radius: 12px;
-  font-size: 14px;
-  font-weight: 700;
-}
-.primary { background: #f7f7fc; color: #11121a; }
-.secondary { border: 1px solid #ffffff30; }
-.note { color: #81899f; font-size: 12px; margin-top: 17px; }
-.art { display: grid; place-items: center; min-height: 330px; position: relative; }
-.orb {
-  width: 260px;
-  aspect-ratio: 1;
-  border-radius: 50%;
-  background: radial-gradient(circle at 35% 30%, #ded8ff, #9985ff 17%, #5140a8 42%, #17152e 72%);
-  box-shadow: 0 0 100px #8e7bff30;
-  position: relative;
-}
-.orb:after {
-  content: "";
-  position: absolute;
-  inset: -28px;
-  border: 1px solid #a394ff55;
-  border-radius: 50%;
-  transform: scaleY(.4) rotate(-25deg);
-}
-.float {
-  position: absolute;
-  background: #151725eF;
-  border: 1px solid #ffffff22;
-  border-radius: 13px;
-  padding: 12px 16px;
-  font-size: 13px;
-  box-shadow: 0 10px 30px #0005;
-}
-.float small { display: block; color: var(--muted); }
-.f1 { top: 20px; right: 0; }
-.f2 { bottom: 22px; left: 0; }
-section.info { border-top: 1px solid #ffffff18; padding: 75px 0; }
-.eyebrow { color: var(--mint); font-size: 12px; letter-spacing: 2px; text-transform: uppercase; }
-h2 { font-size: clamp(32px, 4vw, 46px); line-height: 1.15; letter-spacing: -1.5px; }
-.muted { color: var(--muted); max-width: 650px; }
-.cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 32px; }
-.card { background: var(--panel); border: 1px solid #ffffff15; border-radius: 18px; padding: 24px; }
-.card .icon { font-size: 25px; color: var(--purple); }
-.card h3 { font-size: 17px; }
-.card p { color: var(--muted); font-size: 14px; }
-.banner {
-  padding: 32px;
-  border: 1px solid #a394ff55;
-  border-radius: 22px;
-  background: linear-gradient(120deg, #a394ff18, #8cf0d008);
-}
-.status { color: #f2ce83; font-size: 12px; }
-footer {
-  border-top: 1px solid #ffffff18;
-  padding: 27px 0 35px;
-  color: #81899f;
-  font-size: 12px;
-  display: flex;
-  justify-content: space-between;
-  gap: 15px;
-  flex-wrap: wrap;
-}
-@media (max-width: 700px) {
-  .hero { grid-template-columns: 1fr; padding: 60px 0 35px; }
-  h1 { letter-spacing: -2px; }
-  .art { min-height: 290px; }
-  .orb { width: 205px; }
-  .cards { grid-template-columns: 1fr; }
-  section.info { padding: 55px 0; }
-  nav a:last-child { font-size: 12px; }
-}
+:root{color-scheme:dark;--bg:#08090d;--panel:#11131b;--text:#f6f7fb;--muted:#9da3b5;--mint:#b7ffe0;--violet:#9d83ff;--line:#ffffff18}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6}
+.wrap{width:min(1080px,calc(100% - 36px));margin:auto}
+header{height:76px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
+.brand{font-size:21px;font-weight:850;letter-spacing:.18em}
+.mark{display:inline-grid;place-items:center;width:34px;height:34px;border-radius:11px;background:linear-gradient(135deg,var(--mint),var(--violet));color:#08090d;margin-right:8px}
+a{color:inherit;text-decoration:none}
+nav{display:flex;gap:22px;color:#b9bdca;font-size:13px}
+.pill{border:1px solid #b7ffe044;padding:9px 14px;border-radius:30px;color:var(--mint)}
+.hero{min-height:590px;padding:75px 0;display:grid;grid-template-columns:1.05fr .95fr;gap:30px;align-items:center}
+.eyebrow,.kicker{font-size:11px;text-transform:uppercase;letter-spacing:.18em;color:var(--mint)}
+.eyebrow{display:inline-block;padding:8px 12px;border:1px solid #b7ffe02b;border-radius:30px;background:#b7ffe00a}
+h1{font-size:clamp(48px,6.5vw,78px);line-height:1;letter-spacing:-.065em;margin:25px 0}
+h1 span{color:var(--mint)}
+.lead,.sub{color:var(--muted);line-height:1.85}
+.lead{max-width:500px;font-size:16px}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:27px}
+.btn{display:inline-flex;padding:13px 18px;border-radius:12px;font-size:13px;font-weight:750}
+.primary{background:var(--mint);color:#07100d}
+.secondary{border:1px solid var(--line);background:#ffffff06}
+.micro{color:#777e90;font-size:11px;margin-top:17px}
+.visual{position:relative;display:grid;place-items:center;min-height:350px}
+.orb{width:min(330px,80vw);aspect-ratio:1;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle at 30% 25%,#b7ffe044,transparent 30%),radial-gradient(circle at 65% 75%,#8b6bff55,transparent 50%),linear-gradient(145deg,#191b29,#0a0b11);border:1px solid var(--line);box-shadow:0 0 100px #7962ff19;animation:float 7s ease-in-out infinite;position:relative}
+.orb:before,.orb:after{content:"";position:absolute;inset:15%;border:1px solid #ffffff18;border-radius:50%;transform:scaleX(1.5) rotate(-30deg)}
+.orb:after{transform:scaleX(1.5) rotate(55deg)}
+.core{width:100px;height:100px;border-radius:30px;display:grid;place-items:center;background:linear-gradient(145deg,#c6ffe9,#8b7bff);color:#08090d;font-size:45px;font-weight:900;box-shadow:0 0 70px #9d83ff55;z-index:1}
+.float{position:absolute;background:#141620ee;border:1px solid var(--line);border-radius:14px;padding:13px 16px;font-size:12px}
+.float small{display:block;color:#9298aa;margin-bottom:4px}
+.f1{right:0;top:12%}.f2{left:0;bottom:12%;color:var(--mint)}
+.section{padding:65px 0}
+.section-head{max-width:650px;margin-bottom:30px}
+h2{font-size:clamp(30px,4vw,44px);line-height:1.12;letter-spacing:-.045em;margin:12px 0}
+.sub{font-size:14px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.card,.price-card{border:1px solid var(--line);border-radius:19px;padding:24px;background:linear-gradient(145deg,#151722,#0d0e14)}
+.card{min-height:185px}
+.ico{font-size:22px;color:var(--mint);margin-bottom:17px}
+.card h3,.price-card h3{font-size:16px;margin:0 0 8px}
+.card p{color:var(--muted);font-size:13px;line-height:1.8;margin:0}
+.pricing{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.featured{border-color:#b7ffe04a;background:radial-gradient(ellipse at top right,#9d83ff18,transparent 60%),#11131b}
+.price{font-size:34px;font-weight:800;letter-spacing:-.04em;margin:20px 0 3px}
+.price span{font-size:12px;color:var(--muted);font-weight:400;letter-spacing:0}
+.list{list-style:none;padding:0;display:grid;gap:11px;color:#c4c8d5;font-size:13px;margin:22px 0}
+.list li:before{content:"✓";color:var(--mint);margin-right:9px}
+.notice{margin-top:15px;padding:15px;border:1px solid #9d83ff2b;border-radius:12px;color:#b5b6c7;font-size:12px;line-height:1.7}
+.devices{display:flex;gap:9px;flex-wrap:wrap}
+.device{border:1px solid var(--line);border-radius:10px;padding:10px 13px;color:#c8cbd6;font-size:12px}
+.cta{padding:32px;border:1px solid #b7ffe026;border-radius:22px;background:radial-gradient(ellipse at 80% 0,#9d83ff1c,transparent 60%),#11131b;display:flex;align-items:center;justify-content:space-between;gap:22px}
+.cta h2{margin:0 0 8px}.cta p{color:var(--muted);font-size:13px}
+footer{border-top:1px solid var(--line);margin-top:60px;padding:28px 0 40px;display:flex;justify-content:space-between;gap:18px;color:#777e90;font-size:11px}
+footer strong{letter-spacing:.18em;color:#d0d3df}
+@keyframes float{50%{transform:translateY(-10px) rotate(2deg)}}
+@media(max-width:740px){nav{display:none}.hero{grid-template-columns:1fr;padding:55px 0 30px;text-align:center;gap:10px}.lead{margin:auto}.actions{justify-content:center}.micro{text-align:center}.visual{min-height:290px}.orb{width:255px}.f1{top:7%;right:0}.f2{bottom:5%;left:0}.section{padding:45px 0}.grid,.pricing{grid-template-columns:1fr}.card{min-height:auto}.cta,footer{align-items:flex-start;flex-direction:column}.cta{padding:24px}h1{font-size:53px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;scroll-behavior:auto!important}}
 </style>
 </head>
 <body>
-<nav class="wrap">
-  <a class="logo" href="#">V<span>.</span> VEYLO</a>
-  <a href="#about">О проекте ↘</a>
-</nav>
-
+<header class="wrap">
+<a class="brand" href="#"><span class="mark">V</span>VEYLO</a>
+<nav><a href="#features">Возможности</a><a href="#plans">Тарифы</a><a href="#devices">Устройства</a></nav>
+<a class="pill" href="#plans">Ранний доступ ↗</a>
+</header>
 <main>
-  <div class="wrap hero">
-    <div>
-      <div class="label">● НОВЫЙ ВЗГЛЯД НА ПРИВАТНОСТЬ</div>
-      <h1>Твой интернет.<br><span>Твои правила.</span></h1>
-      <p class="lead">
-        VEYLO VPN создаётся для тех, кто ценит приватность,
-        минимализм и контроль над своим подключением.
-        Без лишнего шума — только то, что важно.
-      </p>
-      <div class="buttons">
-        <a class="btn primary" href="#about">Открыть VEYLO ↗</a>
-        <a class="btn secondary" href="#launch">Следить за запуском</a>
-      </div>
-      <p class="note">Проект в разработке. VPN-подключение пока недоступно.</p>
-    </div>
-
-    <div class="art" aria-hidden="true">
-      <div class="orb"></div>
-      <div class="float f1"><b>Privacy first</b><small>Приватность в основе</small></div>
-      <div class="float f2"><b>VEYLO / 001</b><small>Свобода начинается с контроля</small></div>
-    </div>
-  </div>
-
-  <section class="info" id="about">
-    <div class="wrap">
-      <div class="eyebrow">Философия VEYLO</div>
-      <h2>Меньше сложностей.<br>Больше контроля.</h2>
-      <p class="muted">
-        Мы создаём сервис с акцентом на понятный интерфейс,
-        безопасность и удобство на разных устройствах.
-        Никаких громких обещаний — только последовательная
-        работа над продуктом.
-      </p>
-      <div class="cards">
-        <article class="card">
-          <div class="icon">⌁</div>
-          <h3>Приватность</h3>
-          <p>Безопасность и ответственное обращение с данными должны закладываться с самого начала.</p>
-        </article>
-        <article class="card">
-          <div class="icon">◈</div>
-          <h3>Простой интерфейс</h3>
-          <p>Понятные настройки и аккуратный дизайн без технического хаоса.</p>
-        </article>
-        <article class="card">
-          <div class="icon">↗</div>
-          <h3>Твои устройства</h3>
-          <p>В планах — приложения для iOS, Android, Windows и macOS.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="info" id="launch">
-    <div class="wrap">
-      <div class="banner">
-        <div class="eyebrow">Следующий этап</div>
-        <h2>Запуск начинается здесь.</h2>
-        <p class="muted">
-          VEYLO VPN пока находится на этапе разработки.
-          Официальный запуск будет объявлен отдельно.
-        </p>
-        <p class="status">В РАЗРАБОТКЕ · РАННИЙ ДОСТУП ЕЩЁ НЕ ОТКРЫТ</p>
-      </div>
-    </div>
-  </section>
+<section class="wrap hero">
+<div>
+<div class="eyebrow">✦ A quieter kind of online</div>
+<h1>Твой интернет.<br><span>Твои правила.</span></h1>
+<p class="lead">Меньше лишнего шума. Больше контроля над своей цифровой жизнью. VEYLO создаётся для приватного и простого доступа к сети.</p>
+<div class="actions"><a class="btn primary" href="#plans">Исследовать VEYLO ↗</a><a class="btn secondary" href="#features">Почему VEYLO</a></div>
+<p class="micro">Сервис находится в разработке · VPN-подключение пока недоступно</p>
+</div>
+<div class="visual"><div class="orb"><div class="core">V</div></div><div class="float f1"><small>DESIGN PHILOSOPHY</small>Private by intention</div><div class="float f2">● Building carefully</div></div>
+</section>
+<section class="wrap section" id="features">
+<div class="section-head"><div class="kicker">Без лишней сложности</div><h2>Приватность должна ощущаться просто.</h2><p class="sub">Мы проектируем VEYLO вокруг ясного интерфейса, прозрачных принципов и опыта, в котором технологии не мешают жить.</p></div>
+<div class="grid">
+<article class="card"><div class="ico">⌁</div><h3>Простой опыт</h3><p>Понятный интерфейс без перегруженных меню и технического жаргона.</p></article>
+<article class="card"><div class="ico">◈</div><h3>Безопасность в основе</h3><p>Архитектура сервиса и защита соединения разрабатываются и будут проверены до запуска.</p></article>
+<article class="card"><div class="ico">✳</div><h3>Твой цифровой ритм</h3><p>Цель — единый аккуратный опыт на телефоне и компьютере.</p></article>
+</div>
+</section>
+<section class="wrap section" id="plans">
+<div class="section-head"><div class="kicker">Доступ и планы</div><h2>Начинаем с правильного фундамента.</h2><p class="sub">Тарифы пока не продаются. Сейчас мы формируем продукт и определяем, какие возможности действительно нужны пользователям.</p></div>
+<div class="pricing">
+<div class="price-card"><div class="kicker">01 / Community</div><h3>Ранний доступ</h3><div class="price">Бесплатно <span>на этапе знакомства</span></div><ul class="list"><li>Новости разработки</li><li>Информация о запуске</li><li>Следить за развитием проекта</li></ul><a class="btn secondary" href="#devices">Узнать о проекте ↓</a></div>
+<div class="price-card featured"><div class="kicker">02 / Premium</div><h3>VEYLO Plus</h3><div class="price">Скоро <span>условия уточняются</span></div><ul class="list"><li>Планируемые расширенные возможности</li><li>Поддержка нескольких платформ</li><li>Прозрачные условия подписки</li></ul><a class="btn primary" href="#devices">Посмотреть планы ↗</a></div>
+</div>
+<div class="notice">Важно: это сайт-презентация. Регистрация, оплата и VPN-подключение ещё не реализованы. Не вводи платёжные данные на этом этапе.</div>
+</section>
+<section class="wrap section" id="devices">
+<div class="section-head"><div class="kicker">Одна идея · разные экраны</div><h2>Создаём для твоих устройств.</h2><p class="sub">Планируемая поддержка платформ — часть дорожной карты, а не обещание уже работающих приложений.</p><div class="devices"><span class="device">iOS · планируется</span><span class="device">Android · планируется</span><span class="device">Windows · планируется</span><span class="device">macOS · планируется</span></div></div>
+</section>
+<section class="wrap"><div class="cta"><div><h2>Будь рядом с самого начала.</h2><p>Следующий шаг — превратить концепцию VEYLO в работающий сервис.</p></div><a class="btn primary" href="#plans">Узнать о проекте ↗</a></div></section>
 </main>
-
-<footer class="wrap">
-  <a class="logo" href="#">V<span>.</span> VEYLO</a>
-  <span>© 2026 VEYLO VPN</span>
-  <span>Проект в разработке. Сервис пока недоступен.</span>
-</footer>
+<footer class="wrap"><div><strong>VEYLO</strong><p>Твой интернет. Твои правила.</p></div><div>Проект в разработке · VPN-подключение недоступно</div><div>© 2026 VEYLO</div></footer>
 </body>
 </html>
